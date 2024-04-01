@@ -12,4 +12,27 @@ Os efeitos dos processos de inicialização e otimização em deep learning de f
 
 ## O que é o processo de otimização?
 
-  O processo de otimização em Deep Learning é o processo de encontrar os melhores pesos para a rede neural, de modo que ela possa realizar bem em tarefas específicas, como classificação ou regressão. 
+  O processo de otimização em Deep Learning é o processo de encontrar os melhores pesos para a rede neural, de modo que ela possa realizar bem em tarefas específicas, como classificação ou regressão. Existem vários algoritmos diferentes de otimização que podem ser usados, mas os mais comuns são: 
+
+  ### Gradiente Descendente (SGD): 
+  Este é o algoritmo de otimização mais básico e amplamente utilizado. Ele utiliza a derivada da função de perda para atualizar os pesos da rede, movendo-os na direção oposta do gradiente.
+
+  ### Gradiente Descendente Estocástico (SGD):
+    Este é similar ao SGD, mas ao invés de usar todos os exemplos de treinamento para calcular o gradiente, ele utiliza apenas um subconjunto (batch) de exemplo para calcular o gradiente. Isso é útil para lidar com grandes conjuntos de dados.
+
+    ### Momentum:
+    Este algoritmo adiciona uma compenente de inércia às atualizações de peso, permitindo que a rede passe por regiões de baixa inclinação mais rapidamente.
+
+    ### Adagrad:
+    Este algoritmo adapta a taxa de aprendizado para casa parâmetro de forma independente, permitindo que a rede aprenda mais rapidamente para alguns parâmetros e mais devagar para outros.
+
+    ### Adadelta:
+    Este algoritmo é semelhante ao Adagrad, mas ao invés de ajustar a taxa de aprendizado para cada parâmetro, ele ajusta o tamanho do passo para cada parâmetro.
+
+    ### Adam:
+    Este algoritmo combina elementos de Adagrad e Momentum, adaptando o tamanho do passo para cada parâmetro e incluindo uma componente de inércia nas atualizações de peso.
+
+    ### RMSprop:
+    Este algoritmo é similar ao Adagrad, mas ele utiliza uma médida móvel exponencial para ajustar a taxa de aprendizado para cada parâmetro.
+
+    Cada algoritmo tem suas próprias vantagens e desvantagens e o melhor algoritmo a ser usado dependerá do problema específico e da arquitetura da rede.
