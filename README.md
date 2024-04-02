@@ -20,19 +20,31 @@ Os efeitos dos processos de inicialização e otimização em deep learning de f
   ### Gradiente Descendente Estocástico (SGD):
     Este é similar ao SGD, mas ao invés de usar todos os exemplos de treinamento para calcular o gradiente, ele utiliza apenas um subconjunto (batch) de exemplo para calcular o gradiente. Isso é útil para lidar com grandes conjuntos de dados.
 
-    ### Momentum:
+  ### Momentum:
     Este algoritmo adiciona uma compenente de inércia às atualizações de peso, permitindo que a rede passe por regiões de baixa inclinação mais rapidamente.
 
-    ### Adagrad:
+  ### Adagrad:
     Este algoritmo adapta a taxa de aprendizado para casa parâmetro de forma independente, permitindo que a rede aprenda mais rapidamente para alguns parâmetros e mais devagar para outros.
 
-    ### Adadelta:
+  ### Adadelta:
     Este algoritmo é semelhante ao Adagrad, mas ao invés de ajustar a taxa de aprendizado para cada parâmetro, ele ajusta o tamanho do passo para cada parâmetro.
 
-    ### Adam:
+  ### Adam:
     Este algoritmo combina elementos de Adagrad e Momentum, adaptando o tamanho do passo para cada parâmetro e incluindo uma componente de inércia nas atualizações de peso.
 
-    ### RMSprop:
+  ### RMSprop:
     Este algoritmo é similar ao Adagrad, mas ele utiliza uma médida móvel exponencial para ajustar a taxa de aprendizado para cada parâmetro.
 
     Cada algoritmo tem suas próprias vantagens e desvantagens e o melhor algoritmo a ser usado dependerá do problema específico e da arquitetura da rede.
+
+## Arquitetura do Modelo
+
+  A arquitetura de Rede Neural Convolucional (CNN - Convolutional Neural Network) é um tipo de modelo de rede neural projetado para processar dados que têm uma estrutura de grade, como imagens. A estrutura da CNN é inspirada na organização do córtex visual do cérebro humano, que tem neurônios que respondem a regiões específicas do campo visual. Uma CNN é composta por uma série de camadas, cada uma das quais executa uma operação específica na entrada de dados.
+  ### Camadas de Convolução:
+  Essas camadas aplicam filtros a pequenas regiões da entrada, de modo a extrair características visuais importantes como bordas, texturas e formas.
+  ### Camadas de Pooling:
+  Essas camadas reduzem o tamanho da representação da entrada, mantendo as características mais importantes. Isso ajuda a reduzir a complexidade do modelo e a aumentar a eficiência computacional.
+  ### Camadas de Totalmente Conectadas:
+  Essas camadas são semelhantes às camadas usadas em redes neurais padrão. Eles recebem as caracteristicas extraídas pelas camadas anteriores e as usam para gerar uma saída.
+
+  As camadas sao organizadas em uma topologia específica que é projetada para extrair características relevantes da entrada e classificar a imagem corretamente. Essa topologia pode variar dependendo da tarefa específica, como classificação de imagem, detecção de objeto, segmentação de imagem, entre outras. As CNNs são amplamente utilizadas em tarefas relacionadas a imagens, como classificação, detecção de objeto, reconhecimento facial, entre outras. Seu sucesso em muitas dessas tarefas se deve em grande parte à sua capacidade de aprender representações hierárquicas de características visuais relevantes, tornando-as muito eficientes para lidar com grandes volumes de dados de imagens.
